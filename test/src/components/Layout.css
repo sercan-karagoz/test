@@ -1,0 +1,36 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: rgb(211, 193, 193);
+}
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    min-width: 60vw;
+
+    background-color: rgb(211, 193, 193);
+    margin: 0;
+  }
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    min-width: 60vw;
+    background-color: rgb(211, 193, 193);
+}   
+
+
+
