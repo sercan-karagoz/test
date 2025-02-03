@@ -45,6 +45,14 @@ it('password ve email yanlış girildiğinde', () => {
 cy.get('[data-cy="error-message"]').should('have.length', 2);//assert
   });
 
+  it('email ve password doğru girildiğinde ama kurallar kabul edilmediğinde', () => {
+    cy.get('[data-cy="email"]').type('dogru@email.com'); //act
+    cy.get('[data-cy="password"]').type('1234');//act
+    cy.get('[data-cy="terms"]').not('checked');//act
+    cy.get('[data-cy="submit"]').should('be.disabled');//assert
+    
+    
+  });
 
 
 });
