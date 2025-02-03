@@ -26,16 +26,26 @@ describe('Login Form Tests', () => {
   });
 
   it('email yanlış girildiğinde', () => {
-    cy.get('[data-cy="email"]').type('yanlis@email');
+    cy.get('[data-cy="email"]').type('yanlis@email'); //act
     cy.contains(errorMessages.email);
-    cy.get('[data-cy="submit"]').should('be.disabled');
-cy.get('[data-cy="error-message"]').should('have.length', 1);
+    cy.get('[data-cy="submit"]').should('be.disabled');//assert
+cy.get('[data-cy="error-message"]').should('have.length', 1);//assert
   
-    // Hata mesajı kontrolü
    
+
+});
+   
+
+it('password ve email yanlış girildiğinde', () => {
+    cy.get('[data-cy="email"]').type('yanlis@email'); //act
+    
+    cy.get('[data-cy="password"]').type('123');//act
+    cy.contains(errorMessages.password);
+   
+cy.get('[data-cy="error-message"]').should('have.length', 2);//assert
   });
 
- 
+
 
 });
 
@@ -44,4 +54,3 @@ cy.get('[data-cy="error-message"]').should('have.length', 1);
  
 
 
- 

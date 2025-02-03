@@ -106,6 +106,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.password}
           invalid={errors.password}
+          data-cy="password"
         />
         {errors.password && (
           <FormFeedback data-cy="error-message">{errorMessages.password}</FormFeedback>
